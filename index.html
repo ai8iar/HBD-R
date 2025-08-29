@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Remas ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffe6f0, #ff99cc);
+  color: #333;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  color: #fff;
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.cake {
+  margin: 80px auto 0 auto;
+  width: 200px;
+  height: 150px;
+  background: #ffb347;
+  border-radius: 10px;
+  position: relative;
+}
+
+.candle {
+  width: 10px;
+  height: 60px;
+  background: #e47ee7;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+}
+
+.candle:nth-child(1) { left:30px; }
+.candle:nth-child(2) { left:90px; }
+.candle:nth-child(3) { left:150px; }
+
+.flame {
+  width: 14px;
+  height: 14px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.3s infinite alternate;
+  z-index: 50;
+  box-shadow: 0 0 8px 4px rgba(255,165,0,0.7);
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+  50% { transform: translateX(-50%) scaleY(0.8); opacity: 0.8; }
+  100% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+}
+
+.pour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #FFB6C1;
+  border-radius: 10px 10px 0 0;
+  z-index: 10;
+}
+
+.drop {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FF69B4;
+  border-radius: 50%;
+  animation: dropDown 2s infinite;
+}
+
+.drop:nth-child(1) { left:30px; animation-delay:0s; }
+.drop:nth-child(2) { left:90px; animation-delay:0.3s; }
+.drop:nth-child(3) { left:150px; animation-delay:0.6s; }
+
+@keyframes dropDown {
+  0% { top:50px; opacity:1; }
+  80% { top:140px; opacity:1; }
+  100% { top:140px; opacity:0; }
+}
+
+/* الحلويات الصغيرة موزعة فوق الطبقة الوردية */
+.treat {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: 15;
+}
+
+.t1 { background: #FFD700; top:5px; left:10px; }
+.t2 { background: #FF69B4; top:12px; left:30px; }
+.t3 { background: #4C8CFF; top:18px; left:50px; }
+.t4 { background: #00FF7F; top:8px; left:70px; }
+.t5 { background: #FFA500; top:15px; left:90px; }
+.t6 { background: #FF1493; top:22px; left:110px; }
+.t7 { background: #8A2BE2; top:10px; left:130px; }
+.t8 { background: #FF69B4; top:18px; left:150px; }
+.t9 { background: #FFD700; top:12px; left:170px; }
+.t10 { background: #4C8CFF; top:20px; left:25px; }
+.t11 { background: #FFB6C1; top:28px; left:45px; }
+.t12 { background: #FF69B4; top:10px; left:65px; }
+.t13 { background: #FF1493; top:25px; left:85px; }
+.t14 { background: #FFA500; top:15px; left:105px; }
+.t15 { background: #00FF7F; top:20px; left:125px; }
+.t16 { background: #FFD700; top:12px; left:145px; }
+.t17 { background: #FF69B4; top:25px; left:165px; }
+.t18 { background: #FFB6C1; top:18px; left:35px; }
+.t19 { background: #FF1493; top:22px; left:75px; }
+.t20 { background: #FFA500; top:15px; left:115px; }
+.t21 { background: #FF69B4; top:28px; left:15px; }
+.t22 { background: #FFD700; top:10px; left:55px; }
+.t23 { background: #4C8CFF; top:20px; left:95px; }
+.t24 { background: #FFB6C1; top:18px; left:135px; }
+.t25 { background: #FF1493; top:12px; left:175px; }
+.t26 { background: #FFA500; top:22px; left:40px; }
+.t27 { background: #00FF7F; top:15px; left:90px; }
+.t28 { background: #8A2BE2; top:25px; left:140px; }
+
+.balloon {
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  animation: float 4s ease-in-out infinite;
+  z-index: 30;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background: #555;
+  transform: translateX(-50%);
+}
+
+.b1 { background: #FF0000; left: 20px; top: 160px; }
+.b2 { background: #4C8CFF; right: 20px; top: 180px; animation-delay: -2s; }
+.b3 { background: #B266FF; left: 190px; top: 160px; animation-delay: -1s; }
+.b4 { background: rgb(255,0,149); right: 190px; top: 180px; animation-delay: -1.5s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Confetti كثيف وعشوائي لا نهائي */
+.confetti {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: fall 5s linear infinite;
+  top: 0;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(500px) rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+
+<h1>Happy Birthday, Remas ❤️!</h1>
+<p>I hope your days are full of happiness, success, and little joys 🌸. Love you forever ❤️💋</p>
+
+<div class="cake">
+  <div class="candle"><div class="flame"></div></div>
+  <div class="candle"><div class="flame"></div></div>
+  <div class="candle"><div class="flame"></div></div>
+
+  <div class="pour"></div>
+  <div class="drop"></div>
+  <div class="drop"></div>
+  <div class="drop"></div>
+
+  <div class="treat t1"></div>
+  <div class="treat t2"></div>
+  <div class="treat t3"></div>
+  <div class="treat t4"></div>
+  <div class="treat t5"></div>
+  <div class="treat t6"></div>
+  <div class="treat t7"></div>
+  <div class="treat t8"></div>
+  <div class="treat t9"></div>
+  <div class="treat t10"></div>
+  <div class="treat t11"></div>
+  <div class="treat t12"></div>
+  <div class="treat t13"></div>
+  <div class="treat t14"></div>
+  <div class="treat t15"></div>
+  <div class="treat t16"></div>
+  <div class="treat t17"></div>
+  <div class="treat t18"></div>
+  <div class="treat t19"></div>
+  <div class="treat t20"></div>
+</div>
+
+<script>
+    for(let i=0;i<100;i++){
+      let conf=document.createElement('div');
+      conf.className='confetti';
+      conf.style.left=Math.random()*100+'%';
+      conf.style.background='hsl('+Math.random()*360+',70%,50%)';
+      conf.style.animationDuration=(3+Math.random()*3)+'s';
+      conf.style.width= (4+Math.random()*4)+'px';
+      conf.style.height= (4+Math.random()*4)+'px';
+      conf.style.top= (-Math.random()*500)+'px';
+      document.body.appendChild(conf);
+    }
+    </script>
+    
+    </body>
+    </html>
